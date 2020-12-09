@@ -62,13 +62,14 @@ function AnimatedSplashScreen({ image }) {
     try {
       // Load stuff
       await Promise.all([
-        Font.loadAsync('kombat', require('./assets/kombat.ttf'))
+        Font.loadAsync('kombat', require('./assets/ArialCEMTBlack.ttf'))
       ]);
     } catch (e) {
       // handle errors
     } finally {
         setAppReady(true);
     }
+
   });
 
   return (

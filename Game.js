@@ -15,7 +15,7 @@ const Settings = {
   initialSize: 6,
   tileSize: 50,
   hasGrid: false,
-  foodColor: 0xff0000,
+  foodColor:0x7ED321,
   snakeColor: 0x6660e7,
   backgroundColor: 0x7ED321,
   timeInterval: 180,
@@ -24,13 +24,13 @@ const Settings = {
 };
 
 const ohvrid = [
-  require("./emil-varn.jpg"),
-  require("./Emil-rasmus.jpg"),
-  require("./indrek-runk.jpg"),
-  require("./karl.jpg"),
-  require("./Markko.jpg"),
-  require("./maarja.jpg"),
-  require("./oliver.jpg")
+  require("./cockroach.png"),
+  require("./fly.png"),
+  require("./bug.png"),
+  require("./bug2.png"),
+  require("./bug3.png")
+  // require("./maarja.jpg"),
+  // require("./oliver.jpg")
 ]
 export default class Main {
   constructor(context) {
@@ -72,7 +72,7 @@ class Position {
     return this;
   };
 }
- const hennoPilt = require('./92807.jpg');
+ const hennoPilt = require('./head.png');
 
 class Board extends PIXI.Container {
   isRunning = false;
@@ -262,6 +262,7 @@ class Board extends PIXI.Container {
     this.isRunning = false;
     this.onPlaying(false);
     clearInterval(this.secondsInterval);
+    this.sprites.forEach(sprite => this.removeChild(sprite));
   };
 
   onTap = () => {
