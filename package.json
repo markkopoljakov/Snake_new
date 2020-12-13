@@ -6,15 +6,15 @@
     "deploy:web": "expo build:web && netlify deploy --prod --dir web-build/"
   },
   "dependencies": {
-    "expo": "~36.0.0",
+    "expo": "~37.0.0",
     "expo-blur": "~8.0.0",
     "expo-constants": "~8.0.0",
     "expo-gl": "~8.0.0",
     "expo-pixi": "1.2.0",
     "pixi": "^0.3.1",
     "react": "~16.9.0",
-    "react-dom": "~16.9.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+    "react-dom": "~17.0.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.0.tar.gz",
     "react-native-web": "~0.11.0"
   },
   "devDependencies": {

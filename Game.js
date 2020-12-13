@@ -15,22 +15,18 @@ const Settings = {
   initialSize: 6,
   tileSize: 50,
   hasGrid: false,
-  foodColor:0x7ED321,
-  snakeColor: 0x6660e7,
-  backgroundColor: 0x7ED321,
+  foodColor:0x6660e7,
+  snakeColor: 0x7ED321,
+  backgroundColor:0x6660e7,
   timeInterval: 180,
   areWallsLooping: true,
   initialFood: 3,
 };
 
 const ohvrid = [
-  require("./cockroach.png"),
-  require("./fly.png"),
-  require("./bug.png"),
-  require("./bug2.png"),
-  require("./bug3.png")
-  // require("./maarja.jpg"),
-  // require("./oliver.jpg")
+  require("./rat.png"),
+  require("./rat2.png"),
+  require("./rat3.png")
 ]
 export default class Main {
   constructor(context) {
@@ -229,6 +225,8 @@ class Board extends PIXI.Container {
       this.foodPositions.splice(n, 1);
 
       this.currentHead.direction = this.headDirection;
+
+
 
       const velocity = this._getVelocityForDirection(this.headDirection);
       this.head.add(velocity);
